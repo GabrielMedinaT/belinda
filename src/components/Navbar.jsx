@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "../components/Navbar.css";
 
 import Acerca from "../pages/Acerca";
 import Blog from "../pages/Blog";
@@ -10,16 +11,7 @@ import Contacto from "../pages/Contacto";
 const Navbar = () => {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/inicio" element={<Inicio />} />
-          <Route path="/acerca" element={<Acerca />} />
-          <Route path="/terapias" element={<Terapias />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contacto" element={<Contacto />} />
-        </Routes>
-      </BrowserRouter>
-      <ul>
+      <ul className="navbar">
         <li>
           <a href="http://localhost:3000/inicio">Inicio</a>
         </li>
@@ -36,6 +28,15 @@ const Navbar = () => {
           <a href="http://localhost:3000/contacto">Contacto</a>
         </li>
       </ul>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/inicio" element={<Inicio />} />
+          <Route path="/acerca" element={<Acerca />} />
+          <Route path="/terapias" element={<Terapias />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
