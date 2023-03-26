@@ -5,4 +5,15 @@
 .theImgItself {
   width: 100%;
   height: 700px;
+  filter: brightness(0.5);
+}
+
+.imgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: white;
 }
